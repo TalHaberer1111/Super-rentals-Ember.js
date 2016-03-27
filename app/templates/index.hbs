@@ -16,5 +16,11 @@ We hope you find exactly what you're looking for in a place to stay.
   {{/each}}
 </ul>
 
+delete(rental){
+  if (confirm('Are you sure you want to delete this rental?')) {
+    this.sendAction('destroyRental', rental);
+  }
+}
+
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}click here to contact us.{{/link-to}}
